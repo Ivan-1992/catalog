@@ -1,0 +1,9 @@
+.footer {
+    background-color: #D3D3D3;
+    color: black;
+    border-radius: 0;
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
