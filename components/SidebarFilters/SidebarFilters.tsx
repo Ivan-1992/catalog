@@ -5,15 +5,11 @@ export const SidebarFilters = ()=> {
         <aside className="sidebar-filters">
             <h2 className="sidebar-filters__header">Фильтры</h2>
             <label htmlFor="productName">Название</label>
-            <select
+            <input
                 name="productName"
                 id="productName"
-                className="sidebar-filters__select"
-            >
-                <option>Test</option>
-                <option>Test1</option>
-                <option>Test2</option>
-            </select>
+                className="sidebar-filters__name-input"
+            />
             <label htmlFor="productPriceFrom">Цена от</label>
             <input
                 type="number"
