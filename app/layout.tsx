@@ -1,6 +1,6 @@
 import {Header} from "@/components/Header/Header";
 import {Footer} from "@/components/Footer/Footer";
-import "./globals.css";
+import "./globals.scss";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

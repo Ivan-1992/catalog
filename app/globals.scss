@@ -31,4 +31,9 @@ main {
   grid-template-columns: 280px 1fr;
   gap: 24px;
   padding: 24px;
+  background-color: #DCDCDC;
+  color: black;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
 }

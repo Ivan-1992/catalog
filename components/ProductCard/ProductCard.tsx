@@ -1,4 +1,4 @@
-import './ProductsCard.css';
+import './ProductCard.scss';
 
 export type Product = {
     id: number;
@@ -17,7 +17,11 @@ export const ProductCard = ({ product }: ProductCardProps ) => {
     const { name, price, brand, image, inStock } = product;
     return (
         <article className="product-card">
-            <img alt={name} src={image} />
+            <img
+                alt={name}
+                src={image}
+                className="product-card__image"
+            />
             <div>Бренд: {brand}</div>
             <div>Название: {name}</div>
             <div>Цена: {price} Р</div>

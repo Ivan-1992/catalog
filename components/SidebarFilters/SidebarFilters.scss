@@ -1,0 +1,28 @@
+.sidebar-filters {
+    height: auto;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 4px;
+    padding: 16px;
+    &__header {
+        font-weight: 600;
+        font-size: 16px;
+    }
+    &__select {
+        border: 1px solid 	#C0C0C0;
+        border-radius: 4px;
+        padding: 6px;
+    }
+    label {
+        padding-top: 10px;
+        padding-bottom: 4px;
+    }
+    &__price-input {
+        border: 1px solid 	#C0C0C0;
+        border-radius: 4px;
+        padding: 6px;
+    }
+}
