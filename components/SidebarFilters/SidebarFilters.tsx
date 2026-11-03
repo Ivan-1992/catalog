@@ -11,6 +11,7 @@ interface SidebarFiltersProps {
     onMinPriceChange: (value: number | null) => void;
     onMaxPriceChange: (value: number | null) => void;
     onHideOutOfStockChange: (value: boolean) => void;
+    onResetFilter: () => void;
 }
 
 export const SidebarFilters = ({
@@ -24,6 +25,7 @@ export const SidebarFilters = ({
     onMinPriceChange,
     onMaxPriceChange,
     onHideOutOfStockChange,
+    onResetFilter,
 } : SidebarFiltersProps)=> {
     return (
         <aside className="sidebar-filters">
@@ -86,6 +88,12 @@ export const SidebarFilters = ({
                     }}
                 />
             </div>
+            <button
+                type="button"
+                onClick={onResetFilter}
+            >
+                Сбросить фильтры
+            </button>
         </aside>
     )
 }

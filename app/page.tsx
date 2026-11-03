@@ -5,13 +5,13 @@ import {SidebarFilters} from "@/components/SidebarFilters/SidebarFilters";
 import {useState} from "react";
 
 export default function Home() {
-  const [search, setSearch] = useState("");
-  const [brand, setBrand] = useState("");
-  const [minPrice, setMinPrice] = useState<number | null>(null);
-  const [maxPrice, setMaxPrice] = useState<number | null>(null);
-  const [hideOutOfStock, setHideOutOfStock] = useState(false);
+    const [search, setSearch] = useState("");
+    const [brand, setBrand] = useState("");
+    const [minPrice, setMinPrice] = useState<number | null>(null);
+    const [maxPrice, setMaxPrice] = useState<number | null>(null);
+    const [hideOutOfStock, setHideOutOfStock] = useState(false);
 
-  const testProducts: Product[] = [
+    const testProducts: Product[] = [
       {
         id: 0,
         name: 'Test',
@@ -67,21 +67,29 @@ export default function Home() {
         );
     });
 
-  return (
-      <main>
-          <SidebarFilters
-            search={search}
-            brand={brand}
-            minPrice={minPrice}
-            maxPrice={maxPrice}
-            hideOutOfStock={hideOutOfStock}
-            onSearchChange={setSearch}
-            onBrandChange={setBrand}
-            onMinPriceChange={setMinPrice}
-            onMaxPriceChange={setMaxPrice}
-            onHideOutOfStockChange={setHideOutOfStock}
-          />
-          <ProductsGrid products={filteredProducts} />
-      </main>
-  );
+    const resetFilters = () => {
+        setSearch("");
+        setBrand("");
+        setMinPrice(null);
+        setMaxPrice(null);
+        setHideOutOfStock(false);
+    }
+    return (
+        <main>
+             <SidebarFilters
+                search={search}
+                brand={brand}
+                minPrice={minPrice}
+                maxPrice={maxPrice}
+                hideOutOfStock={hideOutOfStock}
+                onSearchChange={setSearch}
+                onBrandChange={setBrand}
+                onMinPriceChange={setMinPrice}
+                onMaxPriceChange={setMaxPrice}
+                onHideOutOfStockChange={setHideOutOfStock}
+                onResetFilter={resetFilters}
+             />
+             <ProductsGrid products={filteredProducts} />
+        </main>
+    );
 }
