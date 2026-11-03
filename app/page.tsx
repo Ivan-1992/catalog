@@ -69,7 +69,18 @@ export default function Home() {
 
   return (
       <main>
-          <SidebarFilters />
+          <SidebarFilters
+            search={search}
+            brand={brand}
+            minPrice={minPrice}
+            maxPrice={maxPrice}
+            hideOutOfStock={hideOutOfStock}
+            onSearchChange={setSearch}
+            onBrandChange={setBrand}
+            onMinPriceChange={setMinPrice}
+            onMaxPriceChange={setMaxPrice}
+            onHideOutOfStockChange={setHideOutOfStock}
+          />
           <ProductsGrid products={filteredProducts} />
       </main>
   );
