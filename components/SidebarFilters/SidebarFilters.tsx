@@ -68,21 +68,24 @@ export const SidebarFilters = ({
                 value={brand}
                 onChange={(e) => onBrandChange(e.target.value)}
             >
-                <option>Volvo</option>
-                <option>Toyota</option>
-                <option>Suzuki</option>
+                <option value="">Все бренды</option>
+                <option value="Volvo">Volvo</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Suzuki">Suzuki</option>
             </select>
-            <label htmlFor="productInStock">В наличии</label>
-            <input
-                type="checkbox"
-                name="productInStock"
-                id="productInStock"
-                className="sidebar-filters__select"
-                checked={hideOutOfStock}
-                onChange={(e) => {
-                    onHideOutOfStockChange(e.target.checked);
-                }}
-            />
+            <div className="sidebar-filters__instock_container">
+                <label htmlFor="productInStock">Скрыть товары не в наличии</label>
+                <input
+                    type="checkbox"
+                    name="productInStock"
+                    id="productInStock"
+                    className="sidebar-filters__checkbox"
+                    checked={hideOutOfStock}
+                    onChange={(e) => {
+                        onHideOutOfStockChange(e.target.checked);
+                    }}
+                />
+            </div>
         </aside>
     )
 }

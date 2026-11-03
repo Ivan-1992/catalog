@@ -26,4 +26,10 @@
         border-radius: 4px;
         padding: 6px;
     }
+    &__instock_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
 }
